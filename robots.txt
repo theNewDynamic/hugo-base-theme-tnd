@@ -1,0 +1,8 @@
+User-agent: *
+# robotstxt.org - if _config production variable is false robots will be disallowed.
+{{ if ne (getenv "HUGO_ENV") "production" }}
+  Disallow: /
+{% else %}
+    Disallow:
+    Disallow: admin/
+{% endif %}
